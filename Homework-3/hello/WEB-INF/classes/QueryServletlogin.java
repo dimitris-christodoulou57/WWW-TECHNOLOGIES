@@ -4,10 +4,9 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet("/querylogin")   // Configure the request URL for this servlet (Tomcat 7/Servlet 3.0 upwards)
+@WebServlet("/querylogin")   // Configure the request URL for this servlet
 public class QueryServletlogin extends HttpServlet {
 
-   // The doGet() runs once per HTTP GET request to this servlet.
    @Override
    public void doPost(HttpServletRequest request, HttpServletResponse response)
                throws ServletException, IOException {
