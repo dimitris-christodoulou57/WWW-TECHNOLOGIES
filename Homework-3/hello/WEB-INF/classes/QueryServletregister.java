@@ -35,21 +35,23 @@ public class QueryServletregister extends HttpServlet {
          String sqlStr = "select * from information where email = "
                + "'" + request.getParameter("email") + "'";   // Single-quote SQL string;
 
-         out.println("<h3>Thank you for your query.</h3>");
          ResultSet rset = stmt.executeQuery(sqlStr);  // Send the query to the server
 
 
          if(rset.next()) {
               out.println("<p>Email used by other user</p>");
+              out.println("<p><a href='register.html'>Clik here</a> to return to sing up page</p>");
         }
         else{
             if(!request.getParameter("psw").equals(request.getParameter("psw-repeat"))){
-                out.println("<p>Pleaase try again ...</p>");
+                out.println("<p>Pleaase try again passwords not match ...</p>");
+                out.println("<p><a href='register.html'>Clik here</a> to return to sing up page</p>");
             }
             sqlStr = "insert into information values(" + "'" +
             request.getParameter("email") + "','" + request.getParameter("psw") + "')";
 
             stmt.executeUpdate(sqlStr);
+            out.println("<p><a href='login.html'>Clik here</a> to return to login page</p>");
         }
       } catch(Exception ex) {
          out.println("<p>Error: " + ex.getMessage() + "</p>");
