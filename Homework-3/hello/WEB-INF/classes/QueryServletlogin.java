@@ -35,20 +35,23 @@ public class QueryServletlogin extends HttpServlet {
          String sqlStr = "select * from information where email = "
                + "'" + request.getParameter("email") + "'";   // Single-quote SQL string;
 
-         out.println("<h3>Thank you for your query.</h3>");
          ResultSet rset = stmt.executeQuery(sqlStr);  // Send the query to the server
 
          if(rset.next()) {
              if (request.getParameter("psw").equals(rset.getString("password"))){
-               out.println("<p> log in succesful</p>");
+               out.println("<p> Log in succesful</p>");
+               out.println("<p><a href='index.html'>Clik here</a> to return to home page</p>");
+
              }
              else {
               // Print a paragraph <p>...</p> for each record
-              out.println("<p> log in fail</p>");
+              out.println("<p> Log in fail</p>");
+              out.println("<p><a href='login.html'>Clik here</a> to return to login page</p>");
             }
           }
           else {
-            out.println("<p> wrong</p>");
+            out.println("<p> Email not found</p>");
+            out.println("<p><a href='login.html'>Clik here</a> to return to login page</p>");
           }
       } catch(Exception ex) {
          out.println("<p>Error: " + ex.getMessage() + "</p>");
