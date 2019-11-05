@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet("/queryregister")   // Configure the request URL for this servlet (Tomcat 7/Servlet 3.0 upwards)
+@WebServlet("/queryregister")   // Configure the request URL for this servlet
 public class QueryServletregister extends HttpServlet {
 
    @Override
