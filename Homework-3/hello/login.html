@@ -1,112 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>LOGIN:Dimitris Christodoulou</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #282726;
+      }
+      form {border: 3px solid #f1f1f1;}
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+      .container {
+        width: 70%;
+        border-radius: 15px;
+        position: absolute;
+        top: 20%;
+        left: 17%;
+        color: #A9A9A9;
+        padding: 7px;
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+      input[type=text], input[type=password] {
+        background-color: #ffffff;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
 
-button:hover {
-  opacity: 0.8;
-}
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
 
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
+      button:hover {
+        opacity: 0.8;
+      }
 
-.container {
-  padding: 16px;
-}
+      .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+      }
 
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
+      .container {
+        padding: 16px;
+      }
 
-.loginbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
 
-.loginbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
+      .loginbtn {
+        padding: 14px 20px;
+        background-color: #A37C27;
+      }
 
-.container {
-  padding: 16px;
-}
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+      .singup {
+        position: absolute;
+        padding: 20px 280px;
+      }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
+      .singup p{
+        font-size: 18px;
+      }
 
-  .loginbtn, .signupbtn {
-     width: 100%;
-  }
-}
-</style>
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        span.psw {
+           display: block;
+           float: none;
+        }
+        .cancelbtn {
+           width: 100%;
+        }
+
+        .loginbtn {
+           width: 100%;
+        }
+      }
+    </style>
 </head>
 <body>
 
-<h2>Login Form</h2>
+    <form action="http://localhost:8080/hello/query" method="post">
 
-<form action="http://83.212.111.107:8080/hello/querylogin" method="post">
+      <div class="container">
+        <h2>Login Form</h2>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
 
-  <div class="container">
-    <label for="email"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
 
 
-    <div class="clearfix">
-      <button type="submit" class="loginbtn">Login</button>
-      <a href="register.html"><button type="button" class="signupbtn">Sign Up</button></a>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+        <div class="clearfix">
+              <button type="submit" class="loginbtn">Login</button>
+        </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <a href="index.html"><button type="button" class="cancelbtn">Cancel</button></a>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+        <div class='singup'>
+          <p>Create an account ?  <a href="register.html">Sign Up</a></p>
+        </div>
+
+      </div>
+    </form>
 
 </body>
 </html>
+
