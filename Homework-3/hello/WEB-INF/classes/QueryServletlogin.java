@@ -43,7 +43,6 @@ public class QueryServletlogin extends HttpServlet {
 
              }
              else {
-              // Print a paragraph <p>...</p> for each record
               out.println("<p> Log in fail</p>");
               out.println("<p><a href='login.html'>Clik here</a> to return to login page</p>");
             }
