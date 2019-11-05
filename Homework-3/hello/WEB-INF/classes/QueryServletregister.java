@@ -7,7 +7,6 @@ import javax.servlet.annotation.*;
 @WebServlet("/queryregister")   // Configure the request URL for this servlet (Tomcat 7/Servlet 3.0 upwards)
 public class QueryServletregister extends HttpServlet {
 
-   // The doGet() runs once per HTTP GET request to this servlet.
    @Override
    public void doPost(HttpServletRequest request, HttpServletResponse response)
                throws ServletException, IOException {
