@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>CONTACT:Dimitris Christodoulou</title>
+  <style>
+
+    body, html{
+      height: 100%;
+    }
+
+    body{
+      background-color: #282726;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+
+    h1{
+      color: #733E0D;
+      text-align: center;
+    }
+
+    h3{
+      color: #733E0D;
+    }
+
+    #mySidenavigation a{
+      position: absolute;
+      transition: 0.3s;
+      padding: 20px;
+      width: 200px;
+      text-decoration: none;
+      text-align: left;
+      font-size: 20px;
+      color:  #A37C27;
+      border-radius: 0 15px 15px 0;
+    }
+
+    #mySidenavigation a:hover {
+      left: 0;
+    }
+
+    #home {
+      top: 120px;
+      left: -170px;
+      background-color: #A9A9A9;
+    }
+
+    #info {
+      top: 220px;
+      left: -170px;
+      background-color: #A9A9A9;
+    }
+
+    #projects {
+      top: 320px;
+      left: -170px;
+      background-color: #A9A9A9;
+    }
+
+    #contact {
+      top: 20px;
+      left: 0px;
+      background-color: #A9A9A9;
+    }
+
+
+    input[type=text], select, textarea {
+      background-color: #282726;
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 0px;
+      margin-bottom: 8px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #733E0D;
+      color: Black;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #A37C27;
+    }
+
+    .container {
+      width: 70%;
+      border-radius: 15px;
+      position: absolute;
+      top: 10%;
+      left: 17%;
+      color: #A9A9A9;
+      padding: 7px;
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    }
+
+    .bottom-right {
+      position: fixed;
+      bottom: 3px;
+      right: 16px;
+    }
+
+    .glyphicon{
+      padding: 10px;
+      font-size: 15px;
+      width: 40px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa {
+      padding: 10px;
+      font-size: 15px;
+      width: 40px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 70px 70px 70px 70px;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+
+    .fa-skype {
+      background: #00aff0;
+      color: white;
+    }
+
+    .footer h4  {
+      text-align: center;
+      font-family: arial;
+      font-size: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="image">
+    <img src="home_photo.jpeg" alt="Home page photo:rocky mountain" style="width:100%">
+
+    <div id="mySidenavigation" class="sidenavigation">
+      <a href="index.html" id="home">HOME  <i class="fa fa-home" style="right: 1px;"></i></a>
+      <a href="info.html" id="info">INFO <i class="glyphicon glyphicon-user" style="right: 1px;"></i></a>
+      <a href="project.html" id="projects">PROJECTS <i class="fa fa-file" style="right: 1px;"></i></a>
+      <a href="contact.html" id="contact">CONTACT <i class="glyphicon glyphicon-envelope" style="right: 1px;"></i></a>
+    </div>
+
+
+    <div class="container">
+      <h3>Contact Form</h3>
+      <form action="/action_page.php">
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="fullname" placeholder="Your name..">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email..">
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option value="default">Select a Topic...</option>
+          <option value="info">More Info</option>
+          <option value="account">My account</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="bottom-right">
+      <a href="https://www.facebook.com/dimitris.chr.54" target="_blank" class="fa fa-facebook"></a>
+      <a href="https://www.google.com" target="_blank" class="fa fa-google"></a>
+      <a href="https://www.linkedin.com/in/dimitris-christodoulou-09383118b/" target="_blank" class="fa fa-linkedin"></a>
+      <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+      <a href="https://www.skype.com" target="_blank" class="fa fa-skype"></a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h4>Dimitris Christodoulou 2019-2020</h4>
+  </div>
+</body>
+</html>
